@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/tnlogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/government_of_tunisia_logo" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bienvenue sur l'application de dépistage en-ligne du CoViD-19."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextAge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Votre age"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Avez vous de la fièvre?" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/radioButtonFievreTrue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="Oui"
+
+            />
+
+        <RadioButton
+            android:id="@+id/radioButtonFievreFalse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Non" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Avez vous un toux sec?" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/radioButtonTouxTrue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Oui" />
+
+        <RadioButton
+            android:id="@+id/radioButtonTouxFalse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Non" />
+    </RadioGroup>
+
+
+    <Spinner
+        android:id="@+id/spinnerGouvernorats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/gouver" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cochez la case de la maladie chronique dont vous avez un historique."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkBoxHypertension"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hypertension" />
+
+    <CheckBox
+        android:id="@+id/checkBoxAsthme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Asthme" />
+
+    <CheckBox
+        android:id="@+id/checkBoxDiabete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Diabète" />
+
+    <Button
+        android:id="@+id/buttonSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Valider" />
+
+
+</LinearLayout>
